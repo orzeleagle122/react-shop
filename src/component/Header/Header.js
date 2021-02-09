@@ -5,7 +5,8 @@ import {
     HeaderLink,
     HeaderH1,
     HeaderCard,
-    HeaderSingIn
+    HeaderSingIn,
+    HeaderInfoWrapper
 } from './Header.elements';
 
 const Header = () => {
@@ -13,18 +14,20 @@ const Header = () => {
         <>
             <HeaderWrapper>
                 <HeaderLogoLink>
-                    <HeaderLink to="/dupa">
+                    <HeaderLink to='/dupa'>
                         <HeaderH1>
                             Shoping Card
                         </HeaderH1>
                     </HeaderLink>
                 </HeaderLogoLink>
-                <HeaderCard>
-                    Card
-                </HeaderCard>
-                <HeaderSingIn>
-                    Sign In
-                </HeaderSingIn>
+                <HeaderInfoWrapper>
+                    <HeaderCard to='/'>
+                        Card
+                    </HeaderCard>
+                    <HeaderSingIn to='/'>
+                        Sign In
+                    </HeaderSingIn>
+                </HeaderInfoWrapper>
             </HeaderWrapper>
         </>
      );

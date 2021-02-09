@@ -1,9 +1,18 @@
 import React from 'react';
+import {
+    BasketWrapper,
+    BasketName
+} from './Basket.elements';
 
 const Basket = () => {
     return ( 
         <>
-            Basket
+            <BasketWrapper>
+                <BasketName>
+                    Card Items
+                </BasketName>
+                
+            </BasketWrapper>
         </>
      );
 }
