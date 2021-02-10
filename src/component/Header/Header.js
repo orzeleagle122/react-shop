@@ -4,26 +4,33 @@ import {
     HeaderLogoLink,
     HeaderLink,
     HeaderH1,
-    HeaderCard,
+    HeaderCart,
     HeaderSingIn,
-    HeaderInfoWrapper
+    HeaderInfoWrapper,
+    ButtonBadge
 } from './Header.elements';
 
-const Header = () => {
+const Header = ({countCardItems}) => {
     return ( 
         <>
             <HeaderWrapper>
                 <HeaderLogoLink>
-                    <HeaderLink to='/dupa'>
+                    <HeaderLink to='/'>
                         <HeaderH1>
-                            Shoping Card
+                            Shoping Cart
                         </HeaderH1>
                     </HeaderLink>
                 </HeaderLogoLink>
                 <HeaderInfoWrapper>
-                    <HeaderCard to='/'>
-                        Card
-                    </HeaderCard>
+                    <HeaderCart to='/'>
+                        Cart {' '} {countCardItems?(
+                            <ButtonBadge>
+                                {countCardItems}
+                            </ButtonBadge>
+                        ):(
+                            <>{' '}</>
+                        )}
+                    </HeaderCart>
                     <HeaderSingIn to='/'>
                         Sign In
                     </HeaderSingIn>

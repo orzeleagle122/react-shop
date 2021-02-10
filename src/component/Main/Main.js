@@ -4,14 +4,17 @@ import {
     MainH2,
     MainProductWrapper,
     MainItem,
-    ItemImage
+    ItemImage,
+    BuyButton,
+    ItemNameH3,
+    ItemPrinceSpan
 } from './Main.elements';
 
-const Main = ({data}) => {
+const Main = ({data,onAdd}) => {
     // const {id,name,prince,image}=data;
     return ( 
         <>
-            {console.log(data)}
+            {/* {console.log(data)} */}
             <MainWrapper>
                 <MainH2>
                     Product
@@ -20,9 +23,15 @@ const Main = ({data}) => {
                     {data.map(item=>(
                         <MainItem key={item.id}>
                             <ItemImage src={item.image}/>
-                            {item.name}
-                            {item.prince}
-                            
+                            <ItemNameH3>
+                                {item.name}
+                            </ItemNameH3>
+                            <ItemPrinceSpan>
+                                ${item.prince}
+                            </ItemPrinceSpan>                            
+                            <BuyButton onClick={()=>onAdd(item)}>
+                                Add to cart
+                            </BuyButton>
                         </MainItem>
                     ))} 
                 </MainProductWrapper>

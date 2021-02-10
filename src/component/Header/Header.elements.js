@@ -25,7 +25,7 @@ export const HeaderH1=styled.h1`
     font-size:1.5rem;
 `;
 
-export const HeaderCard=styled(Link)`
+export const HeaderCart=styled(Link)`
  text-decoration:none;
  margin-right:5px;
 `;
@@ -39,4 +39,13 @@ export const HeaderInfoWrapper=styled.div`
     flex:1;
     display:flex;
     justify-content:flex-end;
+`;
+
+export const ButtonBadge=styled.button`
+    background-color:#f04040;
+    width:1.5rem;
+    border:none;
+    color:#fff;
+    border-radius:0.5rem;
+    padding: 3px;
 `;
