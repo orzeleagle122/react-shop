@@ -22,8 +22,9 @@ justify-content:flex-start;
 `;
 
 export const MainItem=styled.div`
- width:200px;
+ max-width:200px;
  margin-bottom:20px;
+ margin-right:10px;
  flex:1;
 `;
 
